@@ -14,11 +14,7 @@ global path
 def uploader():
     path = str(request.args['x'])
     mypdf.f2i(path)
-    return 'DONE'
 
-
-@app.route('/check')
-def image_checker():
 
     res = []
     for i in os.listdir(os.path.join(os.getcwd(), 'images/')):
@@ -42,4 +38,4 @@ def image_checker():
 
 # driver function
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=8000)
